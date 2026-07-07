@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EEST Nº3 Islas Malvinas</title>
+    <link rel="stylesheet" href="hi.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <img src="logon3.png" alt="Logo del colegio" class="logo">
+            <h1>EEST Nº3 "Islas Malvinas"</h1>
+              <nav>
+                <ul class="nav-links">
+                     <li><a href="index.html">Inicio</a></li>
+                     <li><a href="galeria.html" class="is-active" >Galería</a></li>
+                     <li><a href="noticias.html" >Noticias</a></li>
+                     <li><a href="CONTACTO.HTML">Contacto</a></li>
+                     <li><a href="d1.html">Centro de Estudiantes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- GALERÍA -->
+    <section id="galeria" class="section no-hover">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="carousel">
+                <button onclick="cambiarImagen(-1)">❮</button>
+                <img id="imagen-carrusel" src="imagen1.jpg" alt="Galería" style="max-width: 600px; border-radius: 12px;">
+                <button onclick="cambiarImagen(1)">❯</button>
+            </div>
+            <div class="puntos" id="indicadores"></div>
+        </div>
+    </section>
+
+    <script>
+        const imagenesGaleria = [
+            'imagen1.jpg',
+            'imagen2.jpg',
+            'imagen3.jpg',
+            'imagen4.jpg'
+        ];
+        let indiceGaleria = 0;
+
+        function cambiarImagen(direccion) {
+            indiceGaleria = (indiceGaleria + direccion + imagenesGaleria.length) % imagenesGaleria.length;
+            document.getElementById('imagen-carrusel').src = imagenesGaleria[indiceGaleria];
+        }
+    </script>
+    <script src="ui.js"></script>
+</body>
+</html>
