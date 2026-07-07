@@ -1,9 +1,9 @@
-name = "primeraclase1"
+name = "primeraclase"
 main = "index.js"
 compatibility_date = "2026-05-26"
 account_id = "3c3c4c9a1b5c2908a86e3727770b2d49"
 workers_dev = true
 
 [assets]
-directory = "."
+directory = "Public"
 binding = "ASSETS"
